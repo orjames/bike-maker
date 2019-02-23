@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    background-color: midnightblue;
+    color: whitesmoke;
+    padding: 0.5em;
+}
+
+main {
+    padding: 1em 2em;
+    margin: 0 auto;
+    width: 70vw;
+    border: 2px solid slategrey;
+}
+
+.btn {
+    background-color: rgba(255, 68, 0, 0.8);
+    color: whitesmoke;
+    padding: 0.25em 1em;
+}
+
+.btn:hover {
+    background-color: rgba(255, 68, 0, 0.5);
+}
+.btn:active {
+    background-color: rgba(255, 68, 0, 0.99);
+    transform: translateY(3px);
+}

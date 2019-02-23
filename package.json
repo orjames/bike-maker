@@ -1,0 +1,30 @@
+{
+  "name": "bike-maker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orjames/bike-maker.git"
+  },
+  "author": "Owen R. James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orjames/bike-maker/issues"
+  },
+  "homepage": "https://github.com/orjames/bike-maker#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "method-override": "^3.0.0",
+    "pg": "^7.8.1",
+    "request": "^2.88.0",
+    "sequelize": "^4.42.0"
+  }
+}

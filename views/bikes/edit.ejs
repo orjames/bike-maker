@@ -1,0 +1,56 @@
+
+<h3>Edit Bike</h3>
+
+<form method='POST' action='/bikes/<%= selectedBike.id %>/?_method=PUT'>
+    <!-- manufacturer select -->
+    <select name='manufacturer'>
+        <option value="" disabled=true hidden=true
+        <% manufacturers.forEach(manufacturer => { %>
+            <option value='<%= manufacturer.name %>'
+                <% if (manufacturer.name === selectedBike.manufacturer) { %>
+                    <%= 'selected' %>
+                <% } %>
+            ><%= manufacturer.name %></option>
+        <% }) %>
+    </select>
+    
+    <!-- model -->
+    <input type="text" name="model" id="modelInput" value=<%= selectedBike.model %>>
+
+    <!-- year select -->
+    <select name='year'>
+        <option value="" disabled hidden>Year</option>
+        <% for (let i = new Date().getFullYear(); i >= 1956; i--) { %>
+            <option value="<%= i %>"
+                <% if ( i === selectedBike.year) { %>
+                    <%= 'selected' %>
+                <% } %>   
+            ><%= i %></option>
+        <% } %> 
+    </select>
+
+    <!-- size select -->
+    <select name="size">
+        <option value="" disabled hidden>Size</option>
+        <% for (let i = 42; i <= 72; i+=2) { %>
+            <option value="<%= i %>"
+                <% if ( i === selectedBike.size) { %>
+                    <%= 'selected' %>
+                <% } %>   
+            ><%= i %></option>
+        <% } %>
+    </select>
+
+    <input type="submit" name="submit" class="btn" id="submitInput" value="add bike">
+</form>
+
+<!-- 
+add a select
+    loop through manufacturers
+        make option elements within select tag with value man.name (populate the drop down menu)
+
+add year dropdown
+    use for loop 1956 to 2019
+add size dropdown
+    for loop 18 to 72 i+=2
+-->

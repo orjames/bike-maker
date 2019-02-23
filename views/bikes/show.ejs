@@ -1,0 +1,7 @@
+
+<h3><%= selectedBike.year + ' ' + selectedBike.manufacturer + ' ' + selectedBike.model %></h3>
+<p>Size: <%= selectedBike.size %></p>
+<form method="POST" action="/bikes/<%= selectedBike.id %>?_method=DELETE">
+    <input type="submit" value='remove bike'>
+</form>
+<a class='btn' href="/bikes/<%= selectedBike.id %>/edit">Update this bike</a>

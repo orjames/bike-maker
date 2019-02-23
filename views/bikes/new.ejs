@@ -1,0 +1,45 @@
+
+<h3>Input Your Bike</h3>
+<h4>(promise we won't steal your data)</h4>
+
+<form method='POST' action='/bikes'>
+    <!-- manufacturer select -->
+    <select name='manufacturer'>
+        <option value="" disabled=true selected=true hidden=true>Manufacturer</option>
+        <% manufacturers.forEach(manufacturer => { %>
+            <option value='<%= manufacturer.name %>'><%= manufacturer.name %></option>
+        <% }) %>
+    </select>
+    
+    <!-- model -->
+    <input type="text" name="model" id="modelInput" placeholder="model">
+
+    <!-- year select -->
+    <select name='year'>
+        <option value="" disabled selected hidden>Year</option>
+        <% for (let i = new Date().getFullYear(); i >= 1956; i--) { %>
+            <option value="<%= i %>"><%= i %></option>
+        <% } %> 
+    </select>
+
+    <!-- size select -->
+    <select name="size">
+        <option value="" disabled selected hidden>Size</option>
+        <% for (let i = 42; i <= 72; i+=2) { %>
+            <option value="<%= i %>"><%= i %></option>
+        <% } %>
+    </select>
+
+    <input type="submit" name="submit" class="btn" id="submitInput" value="add bike">
+</form>
+
+<!-- 
+add a select
+    loop through manufacturers
+        make option elements within select tag with value man.name (populate the drop down menu)
+
+add year dropdown
+    use for loop 1956 to 2019
+add size dropdown
+    for loop 18 to 72 i+=2
+-->
